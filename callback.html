@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+<head><meta charset="UTF-8"><title>認証完了</title></head>
+<body>
+  <h2>✅ 認証情報を取得しました</h2>
+  <p><strong>uid：</strong><span id="uid"></span></p>
+  <p><strong>state：</strong><span id="state"></span></p>
+  <p style="color:gray">上の値をコピーしてください</p>
+  <script>
+    const p = new URLSearchParams(window.location.search);
+    document.getElementById('uid').textContent   = p.get('uid')   || 'なし';
+    document.getElementById('state').textContent = p.get('state') || 'なし';
+  </script>
+</body>
+</html>
